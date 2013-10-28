@@ -2061,24 +2061,24 @@ int init_nvram(void)
 		nvram_set("wl0_vifnames", "wl0.1 wl0.2 wl0.3");
 		nvram_set("wl1_vifnames", "wl1.1 wl1.2 wl1.3");
 #ifdef RTCONFIG_USBRESET
-		nvram_set_int("pwr_usb_gpio", 9|GPIO_ACTIVE_LOW);
+//		nvram_set_int("pwr_usb_gpio", 9|GPIO_ACTIVE_LOW);
 		nvram_set_int("pwr_usb_gpio2", 10|GPIO_ACTIVE_LOW);	// Use at the first shipment of RT-AC56U.
 #else
-		nvram_set_int("pwr_usb_gpio", 9);
+//		nvram_set_int("pwr_usb_gpio", 9);
 		nvram_set_int("pwr_usb_gpio2", 10);	// Use at the first shipment of RT-AC56U.
 #endif
-		nvram_set_int("led_usb_gpio", 14|GPIO_ACTIVE_LOW);	// change led gpio(usb2/usb3) to sync the outer case
-		nvram_set_int("led_wan_gpio", 1|GPIO_ACTIVE_LOW);
-		nvram_set_int("led_lan_gpio", 2|GPIO_ACTIVE_LOW);
-		nvram_set_int("led_pwr_gpio", 3|GPIO_ACTIVE_LOW);
-		nvram_set_int("led_wps_gpio", 3|GPIO_ACTIVE_LOW);
-		nvram_set_int("led_all_gpio", 4|GPIO_ACTIVE_LOW);	// actually, this is high active, and will power off all led when active; to fake LOW_ACTIVE to sync boardapi
-		nvram_set_int("led_5g_gpio", 6|GPIO_ACTIVE_LOW);	// 4352's fake led 5g
-		nvram_set_int("led_usb3_gpio", 0|GPIO_ACTIVE_LOW);	// change led gpio(usb2/usb3) to sync the outer case
-		nvram_set_int("btn_wps_gpio", 15|GPIO_ACTIVE_LOW);
+//		nvram_set_int("led_usb_gpio", 14|GPIO_ACTIVE_LOW);	// change led gpio(usb2/usb3) to sync the outer case
+//		nvram_set_int("led_wan_gpio", 1|GPIO_ACTIVE_LOW);
+//		nvram_set_int("led_lan_gpio", 2|GPIO_ACTIVE_LOW);
+//		nvram_set_int("led_pwr_gpio", 3|GPIO_ACTIVE_LOW);
+//		nvram_set_int("led_wps_gpio", 3|GPIO_ACTIVE_LOW);
+//		nvram_set_int("led_all_gpio", 4|GPIO_ACTIVE_LOW);	// actually, this is high active, and will power off all led when active; to fake LOW_ACTIVE to sync boardapi
+//		nvram_set_int("led_5g_gpio", 6|GPIO_ACTIVE_LOW);	// 4352's fake led 5g
+//		nvram_set_int("led_usb3_gpio", 0|GPIO_ACTIVE_LOW);	// change led gpio(usb2/usb3) to sync the outer case
+		nvram_set_int("btn_wps_gpio", 7|GPIO_ACTIVE_LOW);
 		nvram_set_int("btn_rst_gpio", 11|GPIO_ACTIVE_LOW);
 #ifdef RTCONFIG_WIFI_TOG_BTN
-		nvram_set_int("btn_wltog_gpio", 7|GPIO_ACTIVE_LOW);
+//		nvram_set_int("btn_wltog_gpio", 7|GPIO_ACTIVE_LOW);
 #endif
 #ifdef RTCONFIG_TURBO
 		nvram_set_int("btn_turbo_gpio", 5);
